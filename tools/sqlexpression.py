@@ -1,4 +1,4 @@
-__author__ = 'абрам'
+__author__ = 'rabbiabram@gmail.com'
 
 class sqlexpression:
     def __init__(self,expression = None):
@@ -11,4 +11,4 @@ class sqlexpression:
     def getOptions(self):
         return self.options
     def optionsToString(self):
-        " ".join(self.options)
+        return " ".join(self.options)
