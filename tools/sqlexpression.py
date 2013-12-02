@@ -1,14 +1,17 @@
 __author__ = 'rabbiabram@gmail.com'
 
-class sqlexpression:
+class SQLExpression:
     def __init__(self,expression = None):
         self.name = expression
         self.options = []
-    def addOption(self,option):
-        self.options.append(option)
-    def getName(self):
-        return self.name
-    def getOptions(self):
-        return self.options
-    def optionsToString(self):
-        return " ".join(self.options)
+        self.raw_expression = ''
+        self.OPERATION_TYPES = ['SELECT', 'USE', 'CREATE', 'DELETE', 'INSERT', 'UPDATE']
+
+    def set_raw_expression(self, raw_expression):
+        self.raw_expression = raw_expression
+
+    def get_raw_expression(self):
+        return self.raw_expression
+
+    def parse(self):
+        return True
